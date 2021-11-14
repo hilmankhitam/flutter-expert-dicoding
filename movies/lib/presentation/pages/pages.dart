@@ -1,0 +1,20 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:core/core.dart';
+import 'package:movies/domain/entities/entities.dart';
+import 'package:movies/presentation/bloc/movie_detail_bloc.dart';
+import 'package:movies/presentation/bloc/nowplayingmovies_bloc.dart';
+import 'package:movies/presentation/bloc/popularmovies_bloc.dart';
+import 'package:movies/presentation/bloc/recommendations_movie_bloc.dart';
+import 'package:movies/presentation/bloc/topratedmovies_bloc.dart';
+import 'package:movies/presentation/bloc/watchlist_movies_bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:movies/presentation/widgets/widgets.dart';
+import 'package:provider/provider.dart';
+
+part 'movie_detail_page.dart';
+part 'movies_page.dart';
+part 'popular_movies_page.dart';
+part 'top_rated_movies_page.dart';
