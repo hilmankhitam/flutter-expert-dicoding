@@ -61,18 +61,11 @@ class DetailContent extends StatelessWidget {
       children: [
         CachedNetworkImage(
           imageUrl: 'https://image.tmdb.org/t/p/w500${tvSeries.posterPath}',
-          imageBuilder: (context, imageProvider) => Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: imageProvider,
-              ),
-            ),
-          ),
+          width: screenWidth,
           placeholder: (context, url) => Center(
             child: CircularProgressIndicator(),
           ),
           errorWidget: (context, url, error) => Icon(Icons.error),
-          width: screenWidth,
         ),
         Container(
           margin: const EdgeInsets.only(top: 48 + 8),
@@ -186,14 +179,6 @@ class DetailContent extends StatelessWidget {
                                       ? Image.network(
                                           'https://image.tmdb.org/t/p/w500${season.posterPath}',
                                           fit: BoxFit.cover,
-                                          errorBuilder: (c, o, s) {
-                                            print(
-                                                'Load failed : ${c.toString()}');
-                                            return const Icon(
-                                              Icons.error,
-                                              color: Colors.red,
-                                            );
-                                          },
                                         )
                                       : Icon(Icons.tv),
                                   title: Text(
@@ -215,14 +200,6 @@ class DetailContent extends StatelessWidget {
                                               ? Image.network(
                                                   'https://image.tmdb.org/t/p/w500${episode.stillPath}',
                                                   fit: BoxFit.cover,
-                                                  errorBuilder: (c, o, s) {
-                                                    print(
-                                                        'Load failed : ${c.toString()}');
-                                                    return const Icon(
-                                                      Icons.error,
-                                                      color: Colors.red,
-                                                    );
-                                                  },
                                                 )
                                               : Container(
                                                   margin: EdgeInsets.only(
