@@ -42,7 +42,7 @@ void main() {
     test('should return a JSON map containing proper data', () {
       // arrange
 
-      // act
+      // actz
       final result = tTVSeriesResponseModel.toJson();
       // assert
       final expectedJsonMap = {
